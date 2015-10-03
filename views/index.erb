@@ -1,0 +1,11 @@
+<h1>Welcome <%= @name %></h1>
+<p id="something" class="somethings">Here it is</p>
+Your favorite color is <%= params[:color] %>
+<% if params[:color]=="blue" %>
+  <hr>
+  Woohoo!!!!
+  <%= @name.upcase + "!!!!" %>
+<% end %>
+<hr>
+<a href="/?name=Sean">click here</a>
+<%= params[:name] %>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"> 
+<head>     
+<meta charset="UTF-8" />    
+<title>My App</title>     
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">    
+<style>         .choose a {
+             font-size: 64px;             color: #222;         
+           }     
+</style> 
+</head> 
+  
+  <body>     
+  The computer chose: 
+    <b><%= @cmp_choice %></b><br /> 
+      
+      <h2>     
+        <% if @cmp_choice == "rock" && @choice == "rock" %>       
+           Draw
+        <% end %>  
+
+        <% if @cmp_choice == "rock" && @choice == "paper" %> 
+           Win     
+        <% end %>    
+              
+        <% if @cmp_choice == "rock" && @choice == "scissors" %> 
+          Loose     
+        <% end %>     
+                        
+        <% if @cmp_choice == "paper" && @choice == "rock" %>
+          Loose    
+        <% end %>
+
+        <% if @cmp_choice == "paper" && @choice == "paper" %>
+          Draw     
+        <% end %> 
+
+        <% if @cmp_choice == "paper" && @choice == "scissors" %>
+          Win     
+        <% end %>
+
+        <% if @cmp_choice == "scissors" && @choice == "rock" %> 
+          Win     
+        <% end %> 
+
+        <% if @cmp_choice == "scissors" && @choice == "paper" %>
+          Loose     
+        <% end %> 
+
+        <% if @cmp_choice == "scissors" && @choice == "scissors" %>
+          Draw 
+        <% end %> 
+
+       </h2> 
+           <hr /> 
+             <ul style="list-style: none; margin: 0; padding: 0;" class="choose">         
+                <li><a href="/rps?choice=rock"><i class="fa fa-hand-rock-o"></i></a></li>         
+                <li><a href="/rps?choice=paper"><i class="fa fa-hand-paper-o"></i></a></li>         
+                <li><a href="/rps?choice=scissors"><i class="fa fa-hand-scissors-o"></i></a></li>     
+             </ul>     
+           <hr />
+
+ </body> 
+</html>
